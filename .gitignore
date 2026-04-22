@@ -1,0 +1,21 @@
+__pycache__
+*venv
+
+*.un~
+.ipynb_checkpoints
+*.bak
+.vscode
+.gemini
+
+data/processed/*
+data/splits/*
+data/raw/*
+
+!data/processed/.gitkeep
+!data/splits/.gitkeep
+!data/raw/.gitkeep
+
+checkpoints/
+*.pt
+
+research paper.pdf
