@@ -410,10 +410,15 @@ Open `scripts/train.py`:
 ### 6a. Model Metrics (JSON)
 
 ```powershell
-python -c "import json; d=json.load(open('_results/raw/Full_Run/hybrid.json')); print(f'Accuracy: {d[\"test_metrics\"][\"accuracy\"]:.4f}'); print(f'F1: {d[\"test_metrics\"][\"f1_score\"]:.4f}'); print(f'MCC: {d[\"test_metrics\"][\"mcc\"]:.4f}')"
+python -c "import json;d=json.load(open('_results/raw/Full_Run/hybrid.json'));m=d['test_metrics'];print('Accuracy:',round(m['accuracy'],4));print('F1:',round(m['f1_score'],4));print('MCC:',round(m['mcc'],4))"
 ```
 
-**Expected:** `Accuracy: 0.8990, F1: 0.8992, MCC: 0.8745`
+**Expected:**
+```
+Accuracy: 0.899
+F1: 0.8992
+MCC: 0.8745
+```
 
 ### 6b. Open the Comparison Plots
 
